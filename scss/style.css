@@ -11,25 +11,171 @@ ul, ol {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 body {
-  background: black;
+  color: #333;
+  font-family: 'Dosis', sans-serif;
+}
+
+.current {
+  border-bottom: orange 3.5px solid;
+}
+
+.container {
+  width: 1300px;
+  padding: 0rem 1.5rem;
+}
+
+.btn-light {
+  padding: 0.8rem 2rem;
+  display: inline-block;
+}
+
+.btn-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+#main-landing-page #home-a {
+  padding: 2rem 0rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-title {
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.specials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 #showcase {
   background: url("../img/showcase.jpg") center center/cover no-repeat;
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #f4f4f4;
 }
 
-#showcase header {
+#showcase .container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1rem;
   width: 100%;
-  height: 70px;
+  height: 80px;
+}
+
+#showcase .container .header img {
+  height: 100%;
+}
+
+#showcase .container .header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#showcase .container .header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#showcase .container .header nav ul li {
+  padding: 1rem 1.5rem;
+}
+
+#showcase .container .header nav ul li a {
+  padding-bottom: 0.5rem;
+  color: #f4f4f4;
+}
+
+#showcase .container #showcase-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#showcase .container #showcase-content div {
+  padding-top: 12.5rem;
+  text-align: center;
+}
+
+#showcase .container #showcase-content div h1 {
+  font-size: 4rem;
+}
+
+#showcase .container #showcase-content div p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+#main-landing-page {
+  width: 100%;
+}
+
+#main-landing-page #home-a {
   background: red;
 }
 
-#showcase header img {
-  height: 100%;
+#main-landing-page #home-a .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-landing-page #home-a .container .specials div i {
+  color: orange;
 }
 /*# sourceMappingURL=style.css.map */
