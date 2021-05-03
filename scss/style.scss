@@ -49,7 +49,6 @@ body {
 
 %home-shared{
     padding: 2rem 0rem;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +80,6 @@ body {
 
 #showcase{
     background: url('../img/showcase.jpg') center center/cover no-repeat;
-    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -136,13 +134,17 @@ body {
 
 #main-landing-page {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     #home-a{
-        background: red;
         @extend %home-shared;
+        max-width: $max-width;
         .container{
             align-items: center;
             text-align: center;
             justify-content: center;
+            width: 100%;
             h2{
 
             }

@@ -40,7 +40,6 @@ body {
 
 #main-landing-page #home-a {
   padding: 2rem 0rem;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +78,6 @@ body {
 
 #showcase {
   background: url("../img/showcase.jpg") center center/cover no-repeat;
-  width: 100vw;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,10 +157,19 @@ body {
 
 #main-landing-page {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #main-landing-page #home-a {
-  background: red;
+  max-width: 1300px;
 }
 
 #main-landing-page #home-a .container {
@@ -173,6 +180,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 #main-landing-page #home-a .container .specials div i {
