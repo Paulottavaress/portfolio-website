@@ -1,9 +1,6 @@
-//variables
-$max-width: 1300px;
-$primary-color: orange;
-$secondary-color: #cccccc;
-$light-color: #f4f4f4;
-$dark-color: #333;
+@import 'config';
+
+//General Styles
 
 *{
     margin: 0;
@@ -23,12 +20,20 @@ a{
 body {
     color: $dark-color;
     font-family: 'Dosis', sans-serif;
+    line-height: 1.6;
+}
+
+h2, h3, h4{
+    text-transform: uppercase;
 }
 
 // utilities
 .bg{
     &-secondary{
         background: $secondary-color;
+    }
+    &-light{
+        background: $light-color;
     }
 }
 
@@ -69,6 +74,10 @@ body {
     &-b{
         @extend %home-shared;
     }
+    &-c{
+        @extend %home-shared;
+        flex-direction: column;
+    }
 }
 
 .section-title{
@@ -85,13 +94,22 @@ body {
     margin-bottom: 2rem;
 }
 
-.flex-center{
+%flex-shared{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.flex{
+    @extend %flex-shared;
     &-c{
+        @extend %flex-shared;
         flex-direction: column;
+    }
+    &-side{
+        @extend %flex-shared;
+        justify-content: space-between;
     }
 }
 
@@ -103,15 +121,32 @@ body {
     font-size: 2rem;
 }
 
+.process-icon{
+    border-radius: 50%;
+}
+
+.process-step{
+    border-radius: 50%;
+}
+
+.social i{
+    margin-right: 1em;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 2px solid $white-color;
+    &:hover{
+        background: $primary-color;
+    }
+}
 
 //showcase //header
 
 #showcase{
-    background: url('../img/showcase.jpg') center center/cover no-repeat;
+    background: $bg-image center center/cover no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
-    color: $light-color;
+    color: $white-color;
     .container{
         .header{
             display: flex;
@@ -131,7 +166,7 @@ body {
                         padding: 1rem 1.5rem;
                         a{
                             padding-bottom: 0.5rem;
-                            color: $light-color;
+                            color: $white-color;
                             &:hover{
 
                             }
@@ -146,7 +181,7 @@ body {
             align-items: center;
             justify-content: center;
             div{
-                padding-top: 12.5rem;
+                padding-top: 16rem;
                 text-align: center;
                 h1{
                     font-size: 4rem;
@@ -168,24 +203,12 @@ body {
             text-align: center;
             justify-content: center;
             width: 100%;
-            h2{
-
-            }
-            p{
-
-            }
             .specials{
                 div{
                     line-height: 1.5rem;
                     i{
                         color: $primary-color;
                         padding-bottom: 0.4rem;
-                    }
-                    h3{
-
-                    }
-                    p{
-
                     }
                 }
             }
@@ -204,4 +227,46 @@ body {
             }
         }
     }
+    #home-c{
+        .container{
+            max-width: $max-width;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            width: 100%;
+            .specials{
+                div{
+                    line-height: 1.5rem;
+                    i{
+                        background: $dark-color;
+                        color: $light-color;
+                        padding-bottom: 0.4rem;
+                        margin: 2rem 0rem;
+                        padding: 2rem;
+                        position: relative;
+                        div{
+                            position: absolute;
+                            top:0;
+                            right: 0;
+                            background: $primary-color;
+                            padding: 1rem;
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+            }
+        } 
+    }
 }
+
+#main-footer{
+    width: 100%;
+    background: $dark-color;
+    color: $light-color;
+    .footer-content{
+        margin: 1.5rem 0rem;
+    }
+}
+
+// work
+
