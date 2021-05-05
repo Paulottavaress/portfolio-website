@@ -1,12 +1,13 @@
 //variables
 $max-width: 1300px;
 $primary-color: orange;
+$secondary-color: #cccccc;
 $light-color: #f4f4f4;
 $dark-color: #333;
 
 *{
     margin: 0;
-    border: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -25,6 +26,12 @@ body {
 }
 
 // utilities
+.bg{
+    &-secondary{
+        background: $secondary-color;
+    }
+}
+
 .current{
     border-bottom: $primary-color 3.5px solid;
 }
@@ -50,8 +57,18 @@ body {
 %home-shared{
     padding: 2rem 0rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+#home{
+    &-a{
+        @extend %home-shared;
+        flex-direction: column;
+    }
+    &-b{
+        @extend %home-shared;
+    }
 }
 
 .section-title{
@@ -68,11 +85,22 @@ body {
     margin-bottom: 2rem;
 }
 
-.specials{
+.flex-center{
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    &-c{
+        flex-direction: column;
+    }
+}
+
+.stats-title{
+    font-size: 1.5rem;
+}
+
+.stats-number{
+    font-size: 2rem;
 }
 
 
@@ -133,14 +161,9 @@ body {
 }
 
 #main-landing-page {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     #home-a{
-        @extend %home-shared;
-        max-width: $max-width;
         .container{
+            max-width: $max-width;
             align-items: center;
             text-align: center;
             justify-content: center;
@@ -153,8 +176,10 @@ body {
             }
             .specials{
                 div{
+                    line-height: 1.5rem;
                     i{
                         color: $primary-color;
+                        padding-bottom: 0.4rem;
                     }
                     h3{
 
@@ -162,6 +187,19 @@ body {
                     p{
 
                     }
+                }
+            }
+        }
+    }
+    #home-b{
+        @extend %home-shared; 
+        div{
+            width: 25%;
+            padding: 3rem 0rem;
+            ul{
+                width: 100%;
+                li{
+                    width: 100%;
                 }
             }
         }

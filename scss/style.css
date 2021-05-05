@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  border: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -17,6 +17,10 @@ a {
 body {
   color: #333;
   font-family: 'Dosis', sans-serif;
+}
+
+.bg-secondary {
+  background: #cccccc;
 }
 
 .current {
@@ -38,18 +42,22 @@ body {
   color: #333;
 }
 
-#main-landing-page #home-a {
+#home-a, #home-b, #main-landing-page #home-b {
   padding: 2rem 0rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#home-a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .section-title {
@@ -63,7 +71,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.specials {
+.flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,6 +82,21 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+}
+
+.flex-center-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.stats-title {
+  font-size: 1.5rem;
+}
+
+.stats-number {
+  font-size: 2rem;
 }
 
 #showcase {
@@ -155,24 +178,8 @@ body {
   margin-bottom: 2rem;
 }
 
-#main-landing-page {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#main-landing-page #home-a {
-  max-width: 1300px;
-}
-
 #main-landing-page #home-a .container {
+  max-width: 1300px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -183,7 +190,25 @@ body {
   width: 100%;
 }
 
+#main-landing-page #home-a .container .specials div {
+  line-height: 1.5rem;
+}
+
 #main-landing-page #home-a .container .specials div i {
   color: orange;
+  padding-bottom: 0.4rem;
+}
+
+#main-landing-page #home-b div {
+  width: 25%;
+  padding: 3rem 0rem;
+}
+
+#main-landing-page #home-b div ul {
+  width: 100%;
+}
+
+#main-landing-page #home-b div ul li {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
