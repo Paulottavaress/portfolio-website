@@ -1,4 +1,5 @@
 @import 'config';
+@import 'utilities';
 
 //General Styles
 
@@ -27,119 +28,14 @@ h2, h3, h4{
     text-transform: uppercase;
 }
 
-// utilities
-.bg{
-    &-secondary{
-        background: $secondary-color;
-    }
-    &-light{
-        background: $light-color;
-    }
-}
-
-.current{
-    border-bottom: $primary-color 3.5px solid;
-}
-
-.container{
-    width: $max-width;
-    padding: 0rem 1.5rem;
-}
-
-%btn-shared{
-    padding: 0.8rem 2rem;
-    display: inline-block;
-}
-
-.btn{
-    &-light{
-        @extend %btn-shared;
-        background: $light-color;
-        color: $dark-color;
-    }
-}
-
-%home-shared{
-    padding: 2rem 0rem;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-#home{
-    &-a{
-        @extend %home-shared;
-        flex-direction: column;
-    }
-    &-b{
-        @extend %home-shared;
-    }
-    &-c{
-        @extend %home-shared;
-        flex-direction: column;
-    }
-}
-
-.section-title{
-    padding-bottom: 0.5rem;
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-.bottom-line{
-
-}
-.lead{
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
-}
-
-%flex-shared{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.flex{
-    @extend %flex-shared;
-    &-c{
-        @extend %flex-shared;
-        flex-direction: column;
-    }
-    &-side{
-        @extend %flex-shared;
-        justify-content: space-between;
-    }
-}
-
-.stats-title{
-    font-size: 1.5rem;
-}
-
-.stats-number{
-    font-size: 2rem;
-}
-
-.process-icon{
-    border-radius: 50%;
-}
-
-.process-step{
-    border-radius: 50%;
-}
-
-.social i{
-    margin-right: 1em;
-    padding: 0.5rem;
-    border-radius: 50%;
-    border: 2px solid $white-color;
-    &:hover{
-        background: $primary-color;
-    }
-}
 
 //showcase //header
+
+#logo {
+    width: 70px;
+    height: 70px;
+    color: #fff;
+}
 
 #showcase{
     background: $bg-image center center/cover no-repeat;
@@ -154,9 +50,6 @@ h2, h3, h4{
             padding-top: 1rem;
             width: 100%;
             height: 80px;
-            img{
-                height: 100%;
-            }
             nav{
                 display: flex;
                 align-items: center;
@@ -167,9 +60,14 @@ h2, h3, h4{
                         a{
                             padding-bottom: 0.5rem;
                             color: $white-color;
+                            border-bottom: 3px transparent solid;
+                            transition: border-color 0.5s;
                             &:hover{
-
+                                border-bottom: 3px $light-color solid;
                             }
+                            &.current {
+                                border-bottom: $primary-color 3.5px solid;
+                              }
                         }
                     }
                 }
@@ -181,10 +79,11 @@ h2, h3, h4{
             align-items: center;
             justify-content: center;
             div{
-                padding-top: 16rem;
+                padding-top: 20%;
                 text-align: center;
                 h1{
                     font-size: 4rem;
+                    line-height: 1.2;
                 }
                 p{
                     font-size: 1.3rem;

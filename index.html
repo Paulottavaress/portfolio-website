@@ -14,10 +14,10 @@
     <div id="showcase">
         <div class="container">
             <header class="header">
-                <img src="/img/logo.png" alt="">
+                <img id="logo" src="/img/logo.png" alt="">
                 <nav>
                     <ul>
-                        <li><a class="current" href="index.html">HOME</a></li>
+                        <li><a href="index.html" class="current">HOME</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                         <li><a href="work.html">WORK</a></li>
                         <li><a href="contact.html">CONTACT</a></li>
@@ -26,7 +26,7 @@
             </header>
             <div id="showcase-content">
                 <div>
-                    <h1>I Am Paulo The Dev</h1>
+                    <h1>I Am Paulo The <span class="txt-type" data-wait="3000" data-words='["Dev", "Designer", "Photographer"]'></span></h1>
                     <p>I specialize in Front End Development</p>
                     <a href="work.html" class="btn-light">View My Work</a>
                 </div>
@@ -134,5 +134,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/typewriter.js"></script>
 </body>
 </html>
