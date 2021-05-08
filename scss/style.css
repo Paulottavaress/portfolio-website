@@ -74,6 +74,14 @@ input[class^="btn-"]:hover {
   font-weight: 400;
 }
 
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: #ffbc00;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
 .lead {
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -111,6 +119,7 @@ input[class^="btn-"]:hover {
 
 .stats-number {
   font-size: 2rem;
+  font-weight: bold;
 }
 
 .process-icon {
@@ -263,8 +272,13 @@ h2, h3, h4 {
   width: 100%;
 }
 
+#main-landing-page #home-a .container .specials {
+  margin-top: 3rem;
+}
+
 #main-landing-page #home-a .container .specials div {
   line-height: 1.5rem;
+  margin-right: 1rem;
 }
 
 #main-landing-page #home-a .container .specials div i {
@@ -275,6 +289,7 @@ h2, h3, h4 {
 #main-landing-page #home-b div {
   width: 25%;
   padding: 3rem 0rem;
+  color: black;
 }
 
 #main-landing-page #home-b div ul {
@@ -283,6 +298,7 @@ h2, h3, h4 {
 
 #main-landing-page #home-b div ul li {
   width: 100%;
+  line-height: 2;
 }
 
 #main-landing-page #home-c .container {
@@ -308,6 +324,20 @@ h2, h3, h4 {
   margin: 2rem 0rem;
   padding: 2rem;
   position: relative;
+  width: 120px;
+  height: 120px;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+#main-landing-page #home-c .container .specials div i:hover {
+  background-color: #ffbc00;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#main-landing-page #home-c .container .specials div i:hover div {
+  background-color: #333;
 }
 
 #main-landing-page #home-c .container .specials div i div {
@@ -317,6 +347,8 @@ h2, h3, h4 {
   background: #ffbc00;
   padding: 1rem;
   font-size: 1.7rem;
+  width: 35px;
+  height: 35px;
 }
 
 #main-footer {

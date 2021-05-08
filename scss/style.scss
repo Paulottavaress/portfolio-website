@@ -103,8 +103,10 @@ h2, h3, h4{
             justify-content: center;
             width: 100%;
             .specials{
+                margin-top: 3rem;
                 div{
                     line-height: 1.5rem;
+                    margin-right: 1rem;
                     i{
                         color: $primary-color;
                         padding-bottom: 0.4rem;
@@ -118,10 +120,12 @@ h2, h3, h4{
         div{
             width: 25%;
             padding: 3rem 0rem;
+            color: $black-color;
             ul{
                 width: 100%;
                 li{
                     width: 100%;
+                    line-height: 2;
                 }
             }
         }
@@ -143,6 +147,16 @@ h2, h3, h4{
                         margin: 2rem 0rem;
                         padding: 2rem;
                         position: relative;
+                        width: 120px;
+                        height: 120px;
+                        transition-property: background-color;
+                        &:hover{
+                            background-color: $primary-color;
+                            transform: scale(1.5);
+                            div{
+                                background-color: $dark-color;
+                            }
+                        }
                         div{
                             position: absolute;
                             top:0;
@@ -150,6 +164,8 @@ h2, h3, h4{
                             background: $primary-color;
                             padding: 1rem;
                             font-size: 1.7rem;
+                            width: 35px;
+                            height: 35px;
                         }
                     }
                 }
