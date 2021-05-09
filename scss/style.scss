@@ -44,6 +44,7 @@ h2, h3, h4{
     justify-content: center;
     color: $white-color;
     .container{
+        width: 100%;
         .header{
             display: flex;
             justify-content: space-between;
@@ -97,7 +98,6 @@ h2, h3, h4{
 #main-landing-page {
     #home-a{
         .container{
-            max-width: $max-width;
             align-items: center;
             text-align: center;
             justify-content: center;
@@ -132,29 +132,31 @@ h2, h3, h4{
     }
     #home-c{
         .container{
-            max-width: $max-width;
-            align-items: center;
-            text-align: center;
-            justify-content: center;
             width: 100%;
             .specials{
                 div{
-                    line-height: 1.5rem;
                     i{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         background: $dark-color;
-                        color: $light-color;
+                        color: set-text-color($dark-color);
                         padding-bottom: 0.4rem;
                         margin: 2rem 0rem;
-                        padding: 2rem;
                         position: relative;
                         width: 120px;
                         height: 120px;
                         transition-property: background-color;
+                        border-radius: 50%;
+                        transition: all 1s;
                         &:hover{
                             background-color: $primary-color;
-                            transform: scale(1.5);
+                            width: 150px;
+                            height: 150px;
+                            line-height: 90px;
                             div{
                                 background-color: $dark-color;
+                                color: set-text-color($dark-color);
                             }
                         }
                         div{
@@ -162,10 +164,14 @@ h2, h3, h4{
                             top:0;
                             right: 0;
                             background: $primary-color;
+                            color: set-text-color($primary-color);
                             padding: 1rem;
-                            font-size: 1.7rem;
+                            font-size: 28px;
                             width: 35px;
                             height: 35px;
+                            border-radius: 50%;
+                            line-height: 15px;
+                            transition: all 1s;
                         }
                     }
                 }
@@ -175,13 +181,149 @@ h2, h3, h4{
 }
 
 #main-footer{
-    width: 100%;
     background: $dark-color;
     color: $light-color;
     .footer-content{
+        width: 100%;
         margin: 1.5rem 0rem;
+        .social i {
+            margin-right: 1em;
+            padding: 0.5rem;
+            border-radius: 50%;
+            border: 2px solid $white-color;
+            &:hover {
+              background: $primary-color;
+            }
+        }
     }
 }
 
-// work
+
+
+// about page
+
+#header-2{
+    background: $bg-image center center/cover no-repeat;
+    border-bottom: $primary-color solid 3px;
+    height: 90px;
+    padding-top: 16px;
+    .container{
+        width: 100%;
+        nav{
+            display: flex;
+            align-items: center;
+            ul{
+                display: flex;
+                li{
+                    padding: 1rem 1.5rem;
+
+                    a{
+                        padding-bottom: 0.5rem;
+                        color: $white-color;
+                        border-bottom: 3px transparent solid;
+                        transition: border-color 0.5s;
+                        &:hover{
+                            border-bottom: 3px $light-color solid;
+                        }
+                        &.current {
+                            border-bottom: $primary-color 3.5px solid;
+                          }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#about-a{
+    padding: 3rem 0;
+    .container{
+        .about-info{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1.5rem;
+            .bio-image{
+                width: 100%;
+            }
+            .bio{
+                grid-column: 2 / span 2;
+                padding: 0.8rem;
+                border-left: $primary-color solid 3px;
+            }
+            .award{
+                i{
+                    color: $primary-color;
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+#about-b{
+    padding: 3rem 0;
+    .container{
+        width: 100%;
+        color: $white-color;
+        h4{
+            text-align: left;
+        }
+        .progress{
+            background: $secondary-color;
+            height: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 0.6rem;
+            div {
+                height: 100%;
+                color: #fff;
+                text-align: center;
+                background: $primary-color;
+              }
+        }
+    }
+}
+
+#about-c{
+    padding: 4rem 0;
+    .container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+#about-d{
+    padding: 4rem 0;
+    .container{
+        width: 100%;
+        .testimonials{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 0.5rem;
+            div{
+                p{
+                    border: 1px solid $secondary-color;
+                    border-radius: 5px;
+                    padding: 0.5rem;
+                    text-align: left;
+                }
+                ul{
+                    margin-top: 1rem;
+                    display: grid;
+                    grid-template-columns: 25% auto 10%;
+                    align-items: center;
+                    li{
+                        img{
+                            width: 100%;
+                            border-radius: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 

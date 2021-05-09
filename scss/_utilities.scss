@@ -6,10 +6,13 @@
   &-light {
     background: $light-color;
   }
+  &-dark {
+    background: $dark-color;
+  }
 }
 
 .container {
-  width: $max-width;
+  max-width: $max-width;
   padding: 0rem 1.5rem;
   overflow: hidden;
 }
@@ -38,7 +41,7 @@
 
   &-dark {
     @extend %btn-shared;
-    background: $light-color;
+    background: $dark-color;
     color: $white-color;
   }
 }
@@ -117,20 +120,4 @@ input[class^="btn-"]:hover{
   font-weight: bold;
 }
 
-.process-icon {
-  border-radius: 50%;
-}
 
-.process-step {
-  border-radius: 50%;
-}
-
-.social i {
-  margin-right: 1em;
-  padding: 0.5rem;
-  border-radius: 50%;
-  border: 2px solid $white-color;
-  &:hover {
-    background: $primary-color;
-  }
-}

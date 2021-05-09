@@ -6,8 +6,12 @@
   background: #f4f4f4;
 }
 
+.bg-dark {
+  background: #333;
+}
+
 .container {
-  width: 1280px;
+  max-width: 1280px;
   padding: 0rem 1.5rem;
   overflow: hidden;
 }
@@ -33,7 +37,7 @@
 }
 
 .btn-dark {
-  background: #f4f4f4;
+  background: #333;
   color: #fff;
 }
 
@@ -122,25 +126,6 @@ input[class^="btn-"]:hover {
   font-weight: bold;
 }
 
-.process-icon {
-  border-radius: 50%;
-}
-
-.process-step {
-  border-radius: 50%;
-}
-
-.social i {
-  margin-right: 1em;
-  padding: 0.5rem;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-.social i:hover {
-  background: #ffbc00;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -183,6 +168,10 @@ h2, h3, h4 {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
+}
+
+#showcase .container {
+  width: 100%;
 }
 
 #showcase .container .header {
@@ -261,7 +250,6 @@ h2, h3, h4 {
 }
 
 #main-landing-page #home-a .container {
-  max-width: 1280px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -302,42 +290,43 @@ h2, h3, h4 {
 }
 
 #main-landing-page #home-c .container {
-  max-width: 1280px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 100%;
 }
 
-#main-landing-page #home-c .container .specials div {
-  line-height: 1.5rem;
-}
-
 #main-landing-page #home-c .container .specials div i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: #333;
-  color: #f4f4f4;
+  color: #fff;
   padding-bottom: 0.4rem;
   margin: 2rem 0rem;
-  padding: 2rem;
   position: relative;
   width: 120px;
   height: 120px;
   -webkit-transition-property: background-color;
   transition-property: background-color;
+  border-radius: 50%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 #main-landing-page #home-c .container .specials div i:hover {
   background-color: #ffbc00;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  width: 150px;
+  height: 150px;
+  line-height: 90px;
 }
 
 #main-landing-page #home-c .container .specials div i:hover div {
   background-color: #333;
+  color: #fff;
 }
 
 #main-landing-page #home-c .container .specials div i div {
@@ -345,19 +334,191 @@ h2, h3, h4 {
   top: 0;
   right: 0;
   background: #ffbc00;
+  color: #fff;
   padding: 1rem;
-  font-size: 1.7rem;
+  font-size: 28px;
   width: 35px;
   height: 35px;
+  border-radius: 50%;
+  line-height: 15px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 #main-footer {
-  width: 100%;
   background: #333;
   color: #f4f4f4;
 }
 
 #main-footer .footer-content {
+  width: 100%;
   margin: 1.5rem 0rem;
+}
+
+#main-footer .footer-content .social i {
+  margin-right: 1em;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+#main-footer .footer-content .social i:hover {
+  background: #ffbc00;
+}
+
+#header-2 {
+  background: url("../img/showcase.jpg") center center/cover no-repeat;
+  border-bottom: #ffbc00 solid 3px;
+  height: 90px;
+  padding-top: 16px;
+}
+
+#header-2 .container {
+  width: 100%;
+}
+
+#header-2 .container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header-2 .container nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header-2 .container nav ul li {
+  padding: 1rem 1.5rem;
+}
+
+#header-2 .container nav ul li a {
+  padding-bottom: 0.5rem;
+  color: #fff;
+  border-bottom: 3px transparent solid;
+  -webkit-transition: border-color 0.5s;
+  transition: border-color 0.5s;
+}
+
+#header-2 .container nav ul li a:hover {
+  border-bottom: 3px #f4f4f4 solid;
+}
+
+#header-2 .container nav ul li a.current {
+  border-bottom: #ffbc00 3.5px solid;
+}
+
+#about-a {
+  padding: 3rem 0;
+}
+
+#about-a .container .about-info {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+}
+
+#about-a .container .about-info .bio-image {
+  width: 100%;
+}
+
+#about-a .container .about-info .bio {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / span 2;
+  padding: 0.8rem;
+  border-left: #ffbc00 solid 3px;
+}
+
+#about-a .container .about-info .award i {
+  color: #ffbc00;
+  margin: 1rem 0;
+}
+
+#about-b {
+  padding: 3rem 0;
+}
+
+#about-b .container {
+  width: 100%;
+  color: #fff;
+}
+
+#about-b .container h4 {
+  text-align: left;
+}
+
+#about-b .container .progress {
+  background: #cccccc;
+  height: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+}
+
+#about-b .container .progress div {
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  background: #ffbc00;
+}
+
+#about-c {
+  padding: 4rem 0;
+}
+
+#about-c .container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+#about-d {
+  padding: 4rem 0;
+}
+
+#about-d .container {
+  width: 100%;
+}
+
+#about-d .container .testimonials {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+}
+
+#about-d .container .testimonials div p {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+#about-d .container .testimonials div ul {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% auto 10%;
+      grid-template-columns: 25% auto 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about-d .container .testimonials div ul li img {
+  width: 100%;
+  border-radius: 50px;
 }
 /*# sourceMappingURL=style.css.map */
