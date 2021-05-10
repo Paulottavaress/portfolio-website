@@ -1,3 +1,7 @@
+.bg-primary {
+  background: #ffbc00;
+}
+
 .bg-secondary {
   background: #cccccc;
 }
@@ -38,7 +42,7 @@
 
 .btn-dark {
   background: #333;
-  color: #fff;
+  color: #f4f4f4;
 }
 
 button[class^="btn-"]:hover,
@@ -91,7 +95,7 @@ input[class^="btn-"]:hover {
   margin-bottom: 2rem;
 }
 
-.flex, .flex-c, .flex-side {
+.flex, .flex-c, .flex-side, .flex-even {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,6 +119,11 @@ input[class^="btn-"]:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.flex-even {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .stats-title {
@@ -510,15 +519,124 @@ h2, h3, h4 {
   margin-top: 1rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% auto 10%;
-      grid-template-columns: 25% auto 10%;
+  -ms-grid-columns: 20% auto 10%;
+      grid-template-columns: 20% auto 10%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #about-d .container .testimonials div ul li img {
-  width: 100%;
+  width: 50px;
   border-radius: 50px;
+  margin-right: 8px;
+}
+
+#work-a .container {
+  width: 100%;
+  margin: 3rem 0;
+}
+
+#work-a .container .items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+#work-a .container .items .item {
+  position: relative;
+}
+
+#work-a .container .items .item .item-image img {
+  width: 100%;
+}
+
+#work-a .container .items .item .item-text {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+#contact-a {
+  padding: 3rem 0;
+}
+
+#contact-a .container {
+  width: 100%;
+}
+
+#contact-a .container .text-fields {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'input1 input2' 'input3 input4' 'gridarea gridarea';
+  grid-gap: 1.2rem;
+}
+
+#contact-a .container .text-fields .text-input {
+  padding: 0.5rem 1rem;
+}
+
+#contact-a .container .text-fields .name-input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: input1;
+}
+
+#contact-a .container .text-fields .email-input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: input2;
+}
+
+#contact-a .container .text-fields .subject-input {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: input3;
+}
+
+#contact-a .container .text-fields .phone-input {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: input4;
+}
+
+#contact-a .container .text-fields .message-input {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: gridarea;
+  margin-bottom: 6rem;
+}
+
+#contact-a .container .btn-dark {
+  width: 500px;
+}
+
+#contact-a .container .btn-dark-hover {
+  background: #ffbc00;
+}
+
+#contact-b {
+  padding: 3rem 0;
+}
+
+#contact-b .container {
+  width: 100%;
+}
+
+#contact-b .container div {
+  color: #fff;
+}
+
+#contact-c {
+  padding: 4rem 0;
+}
+
+#contact-c h1 {
+  color: #fff;
+  font-size: 4rem;
 }
 /*# sourceMappingURL=style.css.map */

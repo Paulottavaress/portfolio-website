@@ -313,17 +313,117 @@ h2, h3, h4{
                 ul{
                     margin-top: 1rem;
                     display: grid;
-                    grid-template-columns: 25% auto 10%;
+                    grid-template-columns: 20% auto 10%;
                     align-items: center;
                     li{
                         img{
-                            width: 100%;
+                            width: 50px;
                             border-radius: 50px;
+                            margin-right: 8px;
                         }
                     }
                 }
             }
         }
+    }
+}
+
+// Work Page
+
+#work-a{
+    .container{
+        width: 100%;
+        margin: 3rem 0;
+        .items{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            .item{
+                position: relative;
+                .item-image{
+                    img{
+                        width: 100%;
+                    }
+                }
+                .item-text{
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1;
+                    .item-text-wrap{
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Contact Page
+
+#contact-a{
+    padding: 3rem 0;
+    .container{
+        width: 100%;
+        .section-title{
+
+        }
+        .bottom-line{
+
+        }
+        .lead{
+
+        }
+        .text-fields{
+            display: grid;
+            grid-template-areas: 
+            'input1 input2'
+            'input3 input4'
+            'gridarea gridarea';
+            grid-gap: 1.2rem;
+            .text-input{
+                padding: 0.5rem 1rem;
+            }
+            .name-input{
+                grid-area: input1;
+            }
+            .email-input{
+                grid-area: input2;
+            }
+            .subject-input{
+                grid-area: input3;
+            }
+            .phone-input{
+                grid-area: input4;
+            }
+            .message-input{
+                grid-area: gridarea;
+                margin-bottom: 6rem;
+            }
+        }
+        .btn-dark{
+            width: 500px;
+            &-hover{
+                background: $primary-color;
+            }
+        }
+    }
+}
+
+#contact-b{
+    padding: 3rem 0;
+    .container{
+        width: 100%;
+        div{
+            color: set-text-color($dark-color);
+        }
+    }
+}
+
+#contact-c{
+    padding: 4rem 0;
+    h1{
+        color: set-text-color($primary-color);
+        font-size: 4rem;
     }
 }
 
