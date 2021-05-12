@@ -203,9 +203,9 @@ h2, h3, h4{
 // about page
 
 #header-2{
-    background: $bg-image center center/cover no-repeat;
+    background: $bg-image 20% 30% /cover no-repeat;
     border-bottom: $primary-color solid 3px;
-    height: 90px;
+    height: 5.5rem;
     padding-top: 16px;
     .container{
         width: 100%;
@@ -242,7 +242,7 @@ h2, h3, h4{
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 1.5rem;
+            grid-gap: 1.2rem;
             .bio-image{
                 width: 100%;
             }

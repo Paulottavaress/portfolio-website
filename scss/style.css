@@ -376,9 +376,9 @@ h2, h3, h4 {
 }
 
 #header-2 {
-  background: url("../img/showcase.jpg") center center/cover no-repeat;
+  background: url("../img/showcase.jpg") 20% 30%/cover no-repeat;
   border-bottom: #ffbc00 solid 3px;
-  height: 90px;
+  height: 5.5rem;
   padding-top: 16px;
 }
 
@@ -431,7 +431,7 @@ h2, h3, h4 {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1.5rem;
+  grid-gap: 1.2rem;
 }
 
 #about-a .container .about-info .bio-image {
