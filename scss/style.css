@@ -542,22 +542,116 @@ h2, h3, h4 {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 #work-a .container .items .item {
   position: relative;
+  background: #ffbc00;
+  overflow: hidden;
 }
 
-#work-a .container .items .item .item-image img {
-  width: 100%;
-}
-
-#work-a .container .items .item .item-text {
+#work-a .container .items .item::after {
+  content: '';
   position: absolute;
+  display: block;
+  background: inherit;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  -webkit-transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+          transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+  -webkit-transition: -webkit-transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+  transition: -webkit-transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1), -webkit-transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+#work-a .container .items .item:hover:after {
+  -webkit-transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+          transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+}
+
+#work-a .container .items .item-image {
+  height: auto;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: -webkit-transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition: -webkit-transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1), -webkit-transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+  display: block;
+}
+
+#work-a .container .items .item-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+}
+
+#work-a .container .items .item-image:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#work-a .container .items .item-image:before {
+  content: '';
+  display: block;
+  padding-top: 75%;
+  overflow: hidden;
+}
+
+#work-a .container .items .item-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  text-align: center;
   z-index: 1;
+  color: #fff;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+  -webkit-transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), -webkit-transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), -webkit-transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 500ms cubic-bezier(0.2, 1, 0.3, 1), -webkit-transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+#work-a .container .items .item-text-wrap {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#work-a .container .items .item-text-wrap .item-text-title {
+  font-size: 2rem;
+  padding: 0 1rem;
+  margin: 5px 0 0 0;
+}
+
+#work-a .container .items .item-text-wrap .item-text-category {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+#work-a .container .items .item-text:hover {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 #contact-a {
@@ -571,8 +665,9 @@ h2, h3, h4 {
 #contact-a .container .text-fields {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'input1 input2' 'input3 input4' 'gridarea gridarea';
+      grid-template-areas: 'name email' 'subject phone' 'message message';
   grid-gap: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 #contact-a .container .text-fields .text-input {
@@ -582,40 +677,41 @@ h2, h3, h4 {
 #contact-a .container .text-fields .name-input {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: input1;
+  grid-area: name;
 }
 
 #contact-a .container .text-fields .email-input {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  grid-area: input2;
+  grid-area: email;
 }
 
 #contact-a .container .text-fields .subject-input {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: input3;
+  grid-area: subject;
 }
 
 #contact-a .container .text-fields .phone-input {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  grid-area: input4;
+  grid-area: phone;
 }
 
 #contact-a .container .text-fields .message-input {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
-  grid-area: gridarea;
-  margin-bottom: 6rem;
+  grid-area: message;
+  height: 100px;
+  margin-bottom: 6.5rem;
 }
 
-#contact-a .container .btn-dark {
-  width: 500px;
+#contact-a .container button[type='submit'] {
+  width: 50%;
 }
 
-#contact-a .container .btn-dark-hover {
+#contact-a .container button[type='submit']-hover {
   background: #ffbc00;
 }
 
