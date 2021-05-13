@@ -1,0 +1,189 @@
+// Tablets and smaller devices
+
+@media (max-width: 800px) {
+  #showcase {
+    height: 30rem;
+    .header {
+      padding: 0;
+    }
+    #showcase-content {
+      div {
+        padding: 10% !important;
+      }
+    }
+  }
+}
+
+//Smartphones
+@media (max-width: 500px) {
+  //Header
+  #header-2 {
+    height: 10rem;
+    padding: 0;
+    .container {
+      flex-direction: column;
+      nav {
+        ul {
+          li {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  //Footer
+  #main-footer {
+    .footer-content {
+      flex-direction: column;
+      .social i {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  //Landing Page
+  #showcase {
+    background: $bg-image 20% 30% / cover no-repeat;
+    border-bottom: $primary-color solid 3px;
+    height: 10rem;
+    .container {
+      height: 100%;
+      .header {
+        height: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        nav {
+          ul {
+            li {
+              padding: 1rem;
+            }
+          }
+        }
+      }
+      #showcase-content {
+        display: none;
+      }
+    }
+  }
+
+  #main-landing-page {
+    #home {
+      &-a {
+        .container {
+          .specials {
+            flex-direction: column;
+            div {
+              margin: 0;
+              padding-bottom: 2rem;
+              line-height: 1.7rem;
+            }
+            div:last-child {
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      &-b {
+        flex-direction: column;
+        div {
+          width: 100%;
+          padding: 2rem 0 1rem;
+        }
+      }
+
+      &-c {
+        .container {
+          .specials {
+            flex-direction: column;
+            div {
+              p {
+                padding-bottom: 1rem;
+              }
+
+              p:last-child {
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //About Page
+
+  #about-a {
+    .container {
+      .about-info {
+        grid-template-columns: 1fr;
+        .bio {
+          grid-column: 1 / span 1;
+        }
+      }
+    }
+  }
+
+  #about-c {
+    display: none;
+  }
+
+  #about-d {
+    .container {
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  // Work Page
+
+  #work-a {
+    .container {
+      .items {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  // Contact Page
+
+  #contact {
+    &-a {
+      .container {
+        .text-fields {
+          grid-template-areas:
+            "name name"
+            "email email"
+            "subject subject"
+            "phone phone"
+            "message message";
+        }
+      }
+    }
+
+    &-b {
+      .container {
+        flex-direction: column;
+        div:nth-child(1),
+        div:nth-child(2) {
+          padding-bottom: 1rem;
+          margin-bottom: 1rem;
+          border-bottom: 1px solid $secondary-color;
+          width: 100%;
+        }
+      }
+    }
+
+    &-c {
+      padding: 4rem 0;
+      h1 {
+        color: set-text-color($primary-color);
+        font-size: 2rem;
+        margin: 0 1.5rem;
+      }
+    }
+  }
+}

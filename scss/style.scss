@@ -29,7 +29,7 @@ h2, h3, h4{
 }
 
 
-//showcase //header
+//showcase 
 
 #logo {
     width: 70px;
@@ -149,36 +149,37 @@ h2, h3, h4{
                         transition-property: background-color;
                         border-radius: 50%;
                         transition: all 1s;
-                        &:hover{
-                            background-color: $primary-color;
-                            width: 150px;
-                            height: 150px;
-                            line-height: 90px;
-                            div{
-                                background-color: $dark-color;
-                                color: set-text-color($dark-color);
-                            }
-                        }
+                    }
+                    &:hover{
+                        background-color: $primary-color;
+                        width: 150px;
+                        height: 150px;
+                        line-height: 90px;
                         div{
-                            position: absolute;
-                            top:0;
-                            right: 0;
-                            background: $primary-color;
-                            color: set-text-color($primary-color);
-                            padding: 1rem;
-                            font-size: 28px;
-                            width: 35px;
-                            height: 35px;
-                            border-radius: 50%;
-                            line-height: 15px;
-                            transition: all 1s;
+                            background-color: $dark-color;
+                            color: set-text-color($dark-color);
                         }
+                    }
+                    div{
+                        position: absolute;
+                        top:0;
+                        right: 0;
+                        background: $primary-color;
+                        color: set-text-color($primary-color);
+                        padding: 1rem;
+                        font-size: 28px;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        line-height: 15px;
+                        transition: all 1s;
                     }
                 }
             }
-        } 
-    }
+        }
+    } 
 }
+
 
 #main-footer{
     background: $dark-color;
@@ -316,6 +317,7 @@ h2, h3, h4{
                     grid-template-columns: 20% auto 10%;
                     align-items: center;
                     li{
+                        text-align: left;
                         img{
                             width: 50px;
                             border-radius: 50px;
@@ -342,6 +344,10 @@ h2, h3, h4{
                 position: relative;
                 background: $primary-color;
                 overflow: hidden;
+
+                *{
+                    user-select: none;
+                }
 
                 &::after {
                     content: '';
@@ -486,4 +492,6 @@ h2, h3, h4{
         font-size: 4rem;
     }
 }
+
+@import 'media';
 
